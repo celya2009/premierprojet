@@ -116,6 +116,12 @@ form {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
+
+  .contenair-filtre:hover {
+    background-color:#b3d9ff; 
+    color:#000;
+  } 
+
   .contenair-filtre i {
     color: #0065FC;
     font: size 1px;; 
@@ -125,62 +131,212 @@ form {
     margin: 0;               
 }
 
-.main-containair {
+.main-contenair {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch;
   }
   
- 
   .hebergements {
-    background-color: #f5f5f5;
-    padding: 10px;
-    flex: 3;
-    justify-content: start;
-    max-height: 400px; 
-    overflow-y: auto; 
-  }
-  
-  
-  .populaires {
-    background-color: #f5f5f5;
+    flex: 2;
+    background-color: #f2f2f2;
     padding: 20px;
-    flex: 1;
-  }
-  
-  
-  .hebergements .cards-containair {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    gap: 15px; 
-    align-items: start; 
-  }
-  
-  
-  
-  .populaires .cards-containair {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-
-.card {
-    width:150px ; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-    border-radius: 8px;  
-    background-color: #fff;
-    padding: 10px;px;
-  }
-  
-
-.card img {
-    width: 100%;  
-    height: 100px; 
-    object-fit: cover;  
-    border-top-left-radius: 8px;  
-    border-top-right-radius: 8px;  
+    border-radius: 15px;
+    max-width: 800px; 
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
-  
- 
+.hebergements .section-title {
+    margin-bottom: 20px;
+}
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-decoration: none;   
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.card-subtitle {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-rating {
+    color: #0065fc;
+}
+
+.card-rating .neutral-star {
+    color: #d3d3d3;
+}
+
+.populaires {
+  flex: 1;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+}
+
+.populaires .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  height: 150px;
+}
+
+.populaires .card img {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.populaires .card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100px;;
+}
+
+.card-text {
+  margin-bottom: auto;
+}
+
+.populaires .card h3 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.populaires .card p {
+  margin: 0 0 5px 0;
+  font-size: 13px;
+}
+
+.activites {
+  padding: 30px;
+}
+
+.activites .section-title {
+  margin-bottom: 20px;
+}
+
+.activites-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex-direction: ;
+}
+
+.activites .card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.activites .card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.activites .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+footer {
+  background-color:#F2F2F2;
+  color:black ;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; 
+
+}
+
+footer article {
+  flex: 1;
+  min-width: 200px; 
+}
+
+footer h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer li:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      text-align: left;
+  }
+}
