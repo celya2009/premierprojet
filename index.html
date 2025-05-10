@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
         <nav>
             <img src="img/booki.png" alt="logo booki">
             <ul>
-                <li><a href="#Hebergement">Hebergement</a></li>
-                <li><a href="#Activités">Activités</a></li>
+                <li><a href="#hébergements-marseille">Hébergements</a></li>
+                <li><a href="#activités-marseille">Activités</a></li>
             </ul>
         </nav>
     </header>
@@ -30,12 +30,17 @@
         <p>En plein centre - ville ou en pleine nature</p>
         <div>
             <form class="formulaire-rechercher" action="recherche.php" method="GET">
-                <label for="ville"></label>
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="text" id="ville" name="ville" placeholder="Entrez une ville" required>
-                <button type="submit" id="Rechercher"> Rechercher
-                </button>
+             <div class="barre-de-recherche"> 
+                <span class="icone-location">
+             <i class="fa-solid fa-location-dot"></i>
+                </span>
+             </div>
 
+                <input type="text" id="ville" name="ville" placeholder="Marseille, France" required>
+                <button type="submit" id="Rechercher">
+                    <span class="texte-rechercher">Rechercher</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
         </div>
     </div>
@@ -62,14 +67,12 @@
         </div>
     </div>
 
-
     <main>
+       <div class="main-contenair">
 
-        <div class="main-contenair">
-
-            <section class="hebergements">
+            <section class="hébergements" id="hébergements-marseille">
                 <h2 class="section-title">Hébergements à Marseille</h2>
-                <div class="hebergements-cards">
+                <div class="hébergements-cards">
                     <a href="#">
                         <article class="card">
                             <img src="./img/fred-kleber.jpg" alt="Image Hôtel du port">
@@ -175,7 +178,7 @@
                 <div class="populaires-cards">
 
                     <a href="#" class="card">
-                        <article class="card">
+                        <article>
                             <img src="img/emile-guillemot.jpg" alt="photo d'une chambre d'hotel">
                             <div class="card-content">
                                 <div class="card-text">
@@ -195,7 +198,7 @@
                     </a>
 
                     <a href="#" class="card">
-                        <article class="card">
+                        <article>
                             <img src="img/aw-creative.jpg" alt="photo d'une chambre d'hôte">
                             <div class="card-content">
                                 <div class="card-text">
@@ -215,7 +218,7 @@
                     </a>
 
                     <a href="#" class="card">
-                        <article class="card">
+                        <article>
                             <img src="img/febrian-zakaria2.jpg" alt="photo d'une chambre d'hotel">
                             <div class="card-content">
                                 <div class="card-text">
@@ -239,9 +242,9 @@
         
 
 
-        <section class="activites">
+        <section class="activités" id="activités-marseille">
             <h2 class="section-title">Activités à Marseille</h2>
-            <div class="activites-cards">
+            <div class="activités-cards">
 
                 <a href="#" class="card">
                     <div class="card">
@@ -271,33 +274,34 @@
                         <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
                     </div>
                 </a>
+            </div>
         </section>
 
         <footer>
-            <div class="section footer">
+            <div class="footer-contenair">
                 <article>
                     <h2>A propos</h2>
                     <ul>
-                        <li>Fonctionnement du site</li>
-                        <li>Conditions générales</li>
-                        <li>Données et confidentialité</li>
+                        <li><a href="#">Fonctionnement du site</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Données et confidentialité</a></li>
                     </ul>
                 </article>
 
                 <article>
                     <h2>Nos hébergements</h2>
                     <ul>
-                        <li>Charte qualité </li>
-                        <li>Proposer votre hôtel</li>
+                        <li><a href="#">Charte qualité</a></li>
+                        <li><a href="#">Proposer votre hôtel</a></li>
                     </ul>
                 </article>
 
                 <article>
                     <h2>Assistance</h2>
                     <ul>
-                        <li>Contacter le support</li>
-                        <li>Aide</li>
-                        <li>FAQs</li>
+                        <li><a href="#">Contacter le support</a></li>
+                        <li><a href="#">Aide</a></li>
+                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </article>
 

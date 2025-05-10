@@ -25,15 +25,9 @@ nav ul {
     gap: 30px;
 }
 
-nav ul li a {
-    font-weight: 500;
-    color: #0065FC;
-    padding-top: 20px;
-    border-top: 2px solid transparent;
-    text-decoration: none;
-}
 
 nav ul li a {
+    font-weight: 500;
     color: #000; 
     text-decoration: none; 
     padding: 20px;
@@ -46,10 +40,6 @@ nav ul li a:hover {
     color: #0065FC; 
 }
 
-form {
-    display: flex;
-    flex-direction: row
-  }
 
   .formulaire-rechercher {
     display: flex;
@@ -79,17 +69,9 @@ form {
     border: none; 
     padding: 10px 20px; 
     font-size: 1rem; 
-    border-radius: 5px; 
+    border-radius: 0 15px 15px 0; 
     cursor: pointer; 
 }
-
-  input {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    width: 280px; 
-    transition: border-color 0.3s;
-  }
  
   .ligne-filtres {
     display: flex;
@@ -124,7 +106,7 @@ form {
 
   .contenair-filtre i {
     color: #0065FC;
-    font: size 1px;; 
+    font-size: 16px;
 }
 
 .contenair-filtre h3 {
@@ -137,7 +119,7 @@ form {
     align-items: stretch;
   }
   
-  .hebergements {
+  .hébergements {
     flex: 2;
     background-color: #f2f2f2;
     padding: 20px;
@@ -149,11 +131,11 @@ form {
     margin-bottom: 10px;
 }
 
-.hebergements .section-title {
+.hébergements .section-title {
     margin-bottom: 20px;
 }
 
-.hebergements-cards {
+.hébergements-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -164,7 +146,6 @@ form {
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -237,7 +218,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  height: 100px;;
+  height: 100px;
 }
 
 .card-text {
@@ -254,22 +235,21 @@ form {
   font-size: 13px;
 }
 
-.activites {
+.activités {
   padding: 30px;
 }
 
-.activites .section-title {
+.activités .section-title {
   margin-bottom: 20px;
 }
 
-.activites-cards {
+.activités-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  flex-direction: ;
 }
 
-.activites .card {
+.activités .card {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -280,13 +260,13 @@ form {
   color: inherit;
 }
 
-.activites .card img {
+.activités .card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-.activites .card-title {
+.activités .card-title {
   font-size: 16px;
   font-weight: bold;
   margin: 10px;
@@ -296,17 +276,16 @@ footer {
   background-color:#F2F2F2;
   color:black ;
   padding: 20px 0;
-  text-align: center;
 }
 
-.footer {
+.footer-contenair {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap; 
-
+  text-align: left;
 }
 
 footer article {
@@ -339,4 +318,42 @@ footer li:hover {
       flex-direction: column;
       text-align: left;
   }
+}
+
+@media (max-width: 1024px) {
+  .hébergements-and-populaires {
+      flex-direction: column;
+  }
+
+  .hébergements {
+      width: 100%;
+  }
+
+  .populaires {
+      width: 100%;
+      margin-top: 50px;
+  }
+
+  .populaires-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .populaires-cards a {
+      width: 30%;
+  }
+
+  .populaires-cards .card-title {
+      font-size: 14px;
+  }
+
+  .populaires-cards .card-subtitle {
+      font-size: 13px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* ... */
 }
