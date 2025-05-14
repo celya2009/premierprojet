@@ -1,12 +1,7 @@
 body {
   font-family: 'Raleway',
   sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-  
+  }
 
   header {
   background-color: white;
@@ -32,88 +27,83 @@ body {
   }
   
   nav ul li a {
-    font-weight: 500;
-    color: #000;
-    text-decoration: none;
-    padding: 20px;
-    border-top: 2px solid transparent;
-    transition: border-top 0.3s ease;
+  font-weight: 500;
+  color: #0065FC;
+  padding-top: 20px;
+  border-top: 2px solid transparent;
+  text-decoration: none;
   }
   
+  nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 20px;
+  border-top: 2px solid transparent;
+  transition: border-top 0.3s ease;
+  }
   
-  nav ul li a:hover {
+  nav ul li a\:hover {
   border-top: 2px solid #0065FC;
   color: #0065FC;
   }
   
-  .barre-de-recherche {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    padding: 0; 
-    width: fit-content;
-    margin-left: 0;
-  }
-
-
-  .icone-carte {
-    background-color: #f0f0f0;  
-    padding: 8px;  
-    border-radius: 10px;  
-    margin-right: 10px;     
-}
-
-  
-  .barre-de-recherche input {
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 150px;
+  .formulaire-rechercher {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  overflow: hidden;
+  width: fit-content;
   }
   
-  #Rechercher {
-    background-color: #0065FC;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
+  .formulaire-rechercher i {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: black;
   }
   
-  #Rechercher i {
-    font-size: 16px;
+  .formulaire-rechercher input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+  .formulaire-rechercher button {
+  background-color: #0065FC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
   }
   
   .ligne-filtres {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   gap: 20px;
+  align-items: center;
   margin-top: 20px;
   }
   
   .filtres {
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 10px;
-  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
   }
   
   .contenair-filtre {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 10px 20px;
   border: 2px solid #D9D9D9;
   border-radius: 25px;
   background-color: white;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-}
+  }
   
   .contenair-filtre:hover {
   background-color: #deebff; 
@@ -122,36 +112,13 @@ body {
   
   .contenair-filtre i {
   color: #0065FC;
-  font-size: 20px;
+  font: size 1px;;
   }
   
   .contenair-filtre h3 {
   margin: 0;
   }
   
-  .logements-disponibles {
-    margin-top: 20px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-  }
-  
-  .logements-disponibles i {
-    font-size: 20px; 
-        padding: 8px; 
-        background-color: #0065FC;
-        color: white;
-        border-radius: 50%;
-      }
-
-  .logements-disponibles p {
-    font-size: 14px; 
-    color: #888;
-    margin: 0; 
-  }
-
   .main-contenair {
   display: flex;
   gap: 20px;
@@ -189,6 +156,7 @@ body {
   flex-direction: column;
   text-decoration: none;
   color: black;
+  
   }
   
   .card img {
@@ -283,24 +251,6 @@ body {
   font-size: 13px;
   text-decoration: none;
   }
-
-  .populaires .section-title {
-    display: flex;               
-    align-items: center;        
-    gap: 10px; 
-    justify-content: space-between;                
-  }
-
-  .populaires .section-title h2 {
-    margin: 0;
-    font-size: 22px;
-  }
-  
-  .populaires .section-title i {
-    font-size: 20px;
-    color: #0065fc;            
-  }
-  
   
   a {
     text-decoration: none;
@@ -308,17 +258,15 @@ body {
 
   .activités {
   padding: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
   }
   
   .activités .section-title {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   
   .activités-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   }
   
@@ -342,11 +290,12 @@ body {
   .activités .card-title {
   font-size: 16px;
   font-weight: bold;
+  margin-top: 10px;
   }
   
   footer {
   background-color:#F2F2F2;
-  color:black ;
+  color\:black ;
   padding: 20px 0;
   }
   
@@ -357,7 +306,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-  text-align: left;
   }
   
   footer article {
@@ -384,12 +332,7 @@ body {
   footer li\:hover {
   text-decoration: none;
   }
-
   
-
-  
-
-
     
   @media (max-width: 1024px) {
     body  {

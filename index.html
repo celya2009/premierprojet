@@ -16,8 +16,8 @@
 
 <body>
     <header>
-        <nav>          
-            <img src="img/booki.png" alt="logo booki">         
+        <nav>
+            <img src="img/booki.png" alt="logo booki">
             <ul>
                 <li><a href="#hébergements-marseille">Hébergements</a></li>
                 <li><a href="#activités-marseille">Activités</a></li>
@@ -26,17 +26,21 @@
     </header>
 
     <div>
-        <h1><span class="ligne1">Trouvez votre hébergement</span><span class="ligne2">pour des vacances de rêves</span></h1>
+        <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
         <p>En plein centre - ville ou en pleine nature</p>
-       
-        <div class="barre-de-recherche"> 
-            <span class="icone-carte">
-                <i class="fa-solid fa-location-dot"></i>
-            </span>
-            <input type="text" id="ville" name="ville" placeholder="Marseille, France" required>
-            <button type="submit" id="Rechercher">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div>
+            <form class="formulaire-rechercher" action="recherche.php" method="GET">
+             <div class="barre-de-recherche"> 
+                <span class="icone-location">
+             <i class="fa-solid fa-location-dot"></i>
+                </span>
+             </div>
+
+                <input type="text" id="ville" name="ville" placeholder="Marseille, France" required>
+                <button type="submit" id="Rechercher">
+                    <span class="texte-rechercher">Rechercher</span>                   
+                </button>
+            </form>
         </div>
     </div>
 
@@ -44,25 +48,21 @@
         <h2>Filtres</h2>
         <div class="filtres">
             <div class="contenair-filtre">
-                <i class="fa-solid fa-ticket-alt"></i>
+                <i class="fas fa-ticket-alt"></i>
                 <h3>Économique</h3>
             </div>
             <div class="contenair-filtre">
-                <i class="fa-solid fa-user-friends"></i>
+                <i class="fas fa-user-friends"></i>
                 <h3>Familial</h3>
             </div>
             <div class="contenair-filtre">
-                <i class="fa-solid fa-heart"></i>
+                <i class="fas fa-heart"></i>
                 <h3>Romantique</h3>
             </div>
             <div class="contenair-filtre">
-                <i class="fa-solid fa-fire"></i>
+                <i class="fas fa-fire"></i>
                 <h3>Nos pépites</h3>
             </div>
-        </div>
-        <div class="logements-disponibles">
-            <i class="fa-solid fa-info-circle"></i>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
     </div>
 
@@ -173,10 +173,9 @@
 
 
             <section class="populaires">
-                <div class="section-title">
-                <h2>Les plus populaires</h2>
-               <i class="fa-solid fa-chart-line"></i>
-                </div>
+                <h2 class="section-title">Les plus populaires</h2>
+                <div class="populaires-cards">
+
                     <a href="#">
                         <article class="card">
                             <img src="img/emile-guillemot.jpg" alt="photo d'une chambre d'hotel">
